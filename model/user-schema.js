@@ -12,6 +12,7 @@ const userSchema = mongoose.Schema({
     username: requiredString,
     password: requiredString,
     messages: Number,
+    nameHistory: [String],
 
 })
 
