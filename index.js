@@ -6,19 +6,13 @@ const connectToMongoDb = async () => {
         try{
             console.log('Connected to mongodb!')
             
-            //array adding and removing element
-            const newName = "Ok add"
 
-            await userSchema.findOneAndUpdate({
-                email: 'test@gmail.com'
-            },{
-                //$push for add new element $addToSet for add if new element not exist $pull for delete the element of the array
-                $pull: {
-                    nameHistory: newName
-                }
+            //find sort and limit
+            const result = await userSchema.find({}).sort({
+                messages: 1,
+            }).limit(3)
 
-            })
-
+            console.log('RESULTS:',result)
             
         } finally{
             mongoose.connection.close()

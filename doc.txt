@@ -74,3 +74,11 @@
                 }
 
             })
+
+//find sort and limit
+
+            const result = await userSchema.find({}).sort({
+                messages: 1,
+            }).limit(3)
+
+            console.log('RESULTS:',result)
