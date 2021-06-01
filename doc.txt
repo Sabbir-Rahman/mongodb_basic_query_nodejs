@@ -1,0 +1,39 @@
+//Add user
+            const user = {
+                email: 'testDelete@gmail.com',
+                username: 'Sabbir Required',
+                password: '123456'
+            }
+            await new userSchema(user).save()
+
+
+ //find all user
+            const result = await userSchema.find()
+
+
+ //find user with user name
+ //findOne will return one that first match it is faster than the find
+
+            const result = await userSchema.find({
+                username: 'Sabbir'
+            })
+
+
+ //update the data takes two parameter whose username is Sabbir will become Rahman
+ //update method is depreciated with updateOne, updateMany or bulkWrite
+ 
+            await userSchema.updateOne(
+                {
+                    username: 'Sabbir',
+                },
+                {
+                    username:'Rahman',
+                }
+            )
+
+//delete
+//there are deleteOne , deleteMany also
+
+            await userSchema.deleteOne({
+                email: 'testDelete@gmail.com',
+            })

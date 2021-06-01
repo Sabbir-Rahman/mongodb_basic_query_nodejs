@@ -6,18 +6,12 @@ const connectToMongoDb = async () => {
         try{
             console.log('Connected to mongodb!')
             
+            //delete
+            //there are deleteOne , deleteMany also
 
-            //update the data takes two parameter whose username is Sabbir will become Rahman
-            //update method is depreciated with updateOne, updateMany or bulkWrite
-            await userSchema.updateOne(
-                {
-                    username: 'Sabbir',
-                },
-                {
-                    username:'Rahman',
-                }
-            )
-
+            await userSchema.deleteOne({
+                email: 'testDelete@gmail.com',
+            })
             
 
             
