@@ -6,25 +6,19 @@ const connectToMongoDb = async () => {
         try{
             console.log('Connected to mongodb!')
             
-            //Add user
-            // const user = {
-            //     email: 'test@gmail.com',
-            //     username: 'Bob',
-            //     password: '123456'
-            // }
-            // await new userSchema(user).save()
 
-            //find all user
-            const result = await userSchema.find()
+            //update the data takes two parameter whose username is Sabbir will become Rahman
+            //update method is depreciated with updateOne, updateMany or bulkWrite
+            await userSchema.updateOne(
+                {
+                    username: 'Sabbir',
+                },
+                {
+                    username:'Rahman',
+                }
+            )
 
-            //find user with user name
-            //findOne will return one that first match it is faster than the find
-            const result = await userSchema.find({
-                username: 'Sabbir'
-            })
-
-            console.log('Result:', result)
-
+            
 
             
         } finally{
