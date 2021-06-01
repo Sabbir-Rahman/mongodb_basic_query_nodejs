@@ -1,0 +1,25 @@
+{
+  "name": "mongodb_basic_query_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabbir-Rahman/mongodb_basic_query_nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabbir-Rahman/mongodb_basic_query_nodejs/issues"
+  },
+  "homepage": "https://github.com/Sabbir-Rahman/mongodb_basic_query_nodejs#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.12.12",
+    "nodemon": "^2.0.7"
+  }
+}
