@@ -47,6 +47,10 @@
                 email:'update@gmail.com',
                 username:'Sabbir Updated',
                 password: '127',
+                //this will help to autometically increase or decrease
+                $inc: {
+                    messages: 1,
+                },
 
             },
             //if no natch find and upsert= true it will create a new entry

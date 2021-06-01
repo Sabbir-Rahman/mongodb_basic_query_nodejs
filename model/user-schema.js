@@ -11,6 +11,7 @@ const userSchema = mongoose.Schema({
     email: requiredString,
     username: requiredString,
     password: requiredString,
+    messages: Number,
 
 })
 
